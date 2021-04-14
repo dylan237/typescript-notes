@@ -1,0 +1,21 @@
+{
+  "eslint.options": {    //指定vscode的eslint所处理的文件的后缀
+    "extensions": [
+      ".js",
+      ".vue",
+      ".ts",
+      ".tsx"
+    ]
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "html",
+    "vue",
+    "typescript",
+    "typescriptreact"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
