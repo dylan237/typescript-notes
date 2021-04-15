@@ -1,5 +1,5 @@
 {
-  "eslint.options": {    //指定vscode的eslint所处理的文件的后缀
+  "eslint.options": {
     "extensions": [
       ".js",
       ".vue",

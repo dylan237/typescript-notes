@@ -86,4 +86,16 @@
 
   ting.name = '222'
   ting.id = 2 // 報錯
+
+  /* 介面的繼承 */
+  interface IJob {
+    title: string
+  }
+  interface IRemote extends IJob {
+    location: string
+  }
+  const job: IRemote = {
+    title: 'developer',
+    location: 'Japan'
+  }  
 })()
