@@ -20,7 +20,8 @@
 // import './4_class/03_class和interface'
 
 // import './5_泛型/01_基礎'
-import './5_泛型/02_泛型interface'
+// import './5_泛型/02_泛型interface'
 // import './5_泛型/03_泛型class'
+import './5_泛型/04_泛型約束'
 
 

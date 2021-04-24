@@ -27,9 +27,8 @@
   })
 
   // 額外補充
-  const myCanvas = document.getElementById("main_canvas") as HTMLCanvasElement;
-  const myCanvas2 = <HTMLCanvasElement>document.getElementById("main_canvas");
-
+  const myCanvas: HTMLElement = document.getElementById("main_canvas");
+  const fragment: DocumentFragment = document.createDocumentFragment()
 
   /* 
     PS. 用 TypeScript 寫 Node.js

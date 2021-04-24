@@ -8,7 +8,7 @@
     console.log(arg.length) // X
     return arg
   }
-  
+
   // 對泛型進行約束，只允許這個函式傳入那些包含 length 屬性的變數
   interface Lengthwise {
     length: number
@@ -25,7 +25,6 @@
     }
     return target
   }
-
   const target = { a: 1, b: 2, c: 3, d: 4 }
   const source = { a: 10, b: 20 }
   copyFields(target, source)
