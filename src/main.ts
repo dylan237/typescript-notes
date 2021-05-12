@@ -22,6 +22,9 @@
 // import './5_泛型/01_基礎'
 // import './5_泛型/02_泛型interface'
 // import './5_泛型/03_泛型class'
-import './5_泛型/04_泛型約束'
+// import './5_泛型/04_泛型約束'
+
+// import './6_其他/04_函式混合型別'
+// import './6_其他/04_class的多態'
 
 

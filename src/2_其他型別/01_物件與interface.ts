@@ -88,14 +88,18 @@
   ting.id = 2 // 報錯
 
   /* 介面的繼承 */
-  interface IJob {
-    title: string
-  }
-  interface IRemote extends IJob {
+  interface IRemote {
     location: string
   }
-  const job: IRemote = {
+  interface IHighSalary {
+    salary: number
+  }
+  interface IJob extends IRemote, IHighSalary {
+    title: string
+  }
+  const job: IJob = {
     title: 'developer',
-    location: 'Japan'
+    location: 'Japan',
+    salary: 10000000
   }  
 })()
