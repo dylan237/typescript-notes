@@ -7,7 +7,8 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.config.js",
     "build": "cross-env NODE_ENV=production webpack --config build/webpack.config.js",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src",
-    "commit": "git add . && git-cz"
+    "commit": "git add . && git-cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "author": "",
   "license": "ISC",
