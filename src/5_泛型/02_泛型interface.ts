@@ -2,6 +2,7 @@
 
 ;(() => {
   /* 
+    範例 1. 
       需求：
       定義一個 IBaseCRUD interface，用來定義一個 Class 的基本屬性，此類型含有 data 陣列、add 方法、find 方法，data 用來儲存資料，並且該陣列內的成員的型別(interface)不可寫死，並可以重複調用 IBaseCRUD 透過傳入不同的 interface 來規範 data 屬性的成員，產生各種具有 CRUD 功能的 Class。
   */
@@ -79,4 +80,40 @@
   library.add(new Book('小王子'))
   library.add(new Book('老人與海'))
   console.log('library---', library)
+
+  /* 範例 2. factory design pattern */
+  interface IPokemon {
+    id: string
+    defense: number
+    attack: number
+  }
+  interface IBaseRecord {
+    readonly id: string 
+  }
+  interface IDatabase<T extends IBaseRecord> {
+    get(id: string): T | undefined
+    set(newData: T): void
+  }
+  function createDB<T extends IBaseRecord>() {
+    class InMemoryDB implements IDatabase<T> {
+      private db: Record<string, T> = {}
+      public get(id: string): T | undefined {
+        return this.db[id]
+      }
+      public set(newData: T): void {
+        this.db[newData.id] = newData
+      }
+    }
+    return InMemoryDB
+  }
+
+  const PokemonDB = createDB<IPokemon>()
+  const pokemonDB = new PokemonDB()
+  pokemonDB.set({
+    id: 'Pikachu',
+    attack: 100,
+    defense: 100
+  })
+  console.log('pokemonDB---', pokemonDB);
+  console.log('get---',pokemonDB.get('Pikachu'))
 })()
